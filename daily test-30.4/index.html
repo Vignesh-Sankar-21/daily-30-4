@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="box"></div>
+    <p id="para">count : 0</p>
+    <button onclick="press()" id="button1" class="but1">CLICK</button>
+    <button onclick="reset()" id="button2" >RESET</button>
+    <button onclick="colorred()" id="button3">RED</button>
+    <button onclick="colorblue()" id="button4">BLUE</button>
+    
+<script>
+    var box=document.getElementById("box")
+    var button3=document.getElementById("button3")
+    var para=document.getElementById("para")
+    var ct=0
+    
+    function colorred(){
+        box.style.backgroundColor="red"
+        ct=ct+1
+        para.textContent="count : "+ct
+
+        
+
+    }
+    function colorblue(){
+        box.style.backgroundColor="blue"
+        ct=ct+1
+        para.textContent="count : "+ct
+
+    }
+    function reset(){
+        ct=0
+        para.textContent="count : 0"
+
+    }
+    function press(){
+        ct=ct+1;
+        para.textContent="count : "+ct
+        
+       
+        if(ct%2==0){
+            box.style.width="100px"
+            box.style.height="100px"
+        }
+        if(ct%2!=0){
+            box.style.width="300px"
+            box.style.height="100px"
+        }
+        
+
+
+
+
+
+
+}
+    
+
+</script>
+    
+</body>
+</html>
